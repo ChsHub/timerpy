@@ -3,7 +3,7 @@ from time import sleep
 from hypothesis import given
 from hypothesis.strategies import text
 
-from src.timer import Timer
+from timerpy.timer import Timer
 
 
 @given(text())

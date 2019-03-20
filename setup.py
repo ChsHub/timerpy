@@ -1,6 +1,6 @@
 import setuptools
 from distutils.core import setup
-from src import __version__
+from timerpy import __version__
 
 with open("README.md", "r") as f:
     long_description = f.read()
@@ -14,7 +14,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/ChsHub/timerpy",
-    packages=['src'],
+    packages=['timerpy'],
     license='MIT License',
     classifiers=['Programming Language :: Python :: 3']
 )
