@@ -4,6 +4,7 @@ from timeit import default_timer
 
 class Timer:
     _info = None
+    _message = ''
     elapsed_time = None
 
     def __init__(self, message: str = '', log_function=print) -> None:
@@ -14,7 +15,8 @@ class Timer:
         """
         if not type(message) == str:
             raise TypeError
-        self._message = message + ' '
+        if message:
+            self._message = message + ' '
         self._log_function = log_function
 
     def start(self) -> None:
