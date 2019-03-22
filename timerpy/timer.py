@@ -1,5 +1,5 @@
 from datetime import timedelta
-from timeit import default_timer
+from time import perf_counter_ns
 
 
 class Timer:
@@ -24,20 +24,20 @@ class Timer:
         Start the timing
         :return:
         """
-        self._start = default_timer()  # Use default timer for maximum accuracy
+        self._start = perf_counter_ns()  # Use perf_counter_ns for maximum accuracy
 
     def stop(self) -> float:
         """
         Stop the timing and put out message
         :return: Elapsed time in seconds
         """
-
         # Get time difference
-        self.elapsed_time = default_timer() - self._start
+        self.elapsed_time = perf_counter_ns()
+        self.elapsed_time = self.elapsed_time - self._start
 
         # Print result if function is specified
         if self._log_function:
-            output = timedelta(seconds=self.elapsed_time)
+            output = timedelta(seconds=self.elapsed_time / 1000000000)  # Convert nanoseconds to seconds
             self._log_function('%sTIME ELAPSED: %s' % (self._message, output))
 
         return self.elapsed_time

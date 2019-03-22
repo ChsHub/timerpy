@@ -33,9 +33,9 @@ with Timer('HELLO WORLD', info):
 # Get elapsed time as float value
 with Timer() as timer1:
     # Some code
-seconds = timer1.elapsed_time
-print(seconds)
+nanoseconds = timer1.elapsed_time
+print(nanoseconds)
 
->>>TIME ELAPSED: 0:00:01.399406
->>>1.3994057
+>>>TIME ELAPSED: 0:00:01.400193
+>>>1400192600
 ```
