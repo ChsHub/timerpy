@@ -10,13 +10,12 @@ setup(
     version=__version__,
     description=long_description.split('\n')[1],
     author='ChsHub',
-    author_email='christian1193@web.com',
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/ChsHub/timerpy",
     packages=['timerpy'],
     license='MIT License',
-    classifiers=['Programming Language :: Python :: 3.3']
+    classifiers=['Programming Language :: Python :: 3.3', 'Topic :: Software Development', 'Topic :: Utilities']
 )
 # C:\Python37\python.exe setup.py sdist bdist_wheel
 # C:\Python37\python.exe -m twine upload dist/*
