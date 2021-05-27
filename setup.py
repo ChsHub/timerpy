@@ -17,5 +17,5 @@ setup(
     license='MIT License',
     classifiers=['Programming Language :: Python :: 3.3', 'Topic :: Software Development', 'Topic :: Utilities']
 )
-# C:\Python37\python.exe setup.py sdist bdist_wheel
-# C:\Python37\python.exe -m twine upload dist/*
+# C:\Python38\python.exe setup.py sdist bdist_wheel
+# C:\Python38\python.exe -m twine upload dist/*

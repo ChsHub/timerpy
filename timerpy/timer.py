@@ -29,7 +29,7 @@ class Timer:
     def stop(self) -> float:
         """
         Stop the timing and put out message
-        :return: Elapsed time in seconds
+        :return: Elapsed time in nano-seconds
         """
         # Get time difference
         self.elapsed_time = perf_counter_ns()
